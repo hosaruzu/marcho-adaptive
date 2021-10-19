@@ -3,8 +3,75 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 40px 0;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:first-child) {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    @extend %quicksand-400;
+    color: $title;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .3s all;
+
+    &:hover {
+      text-shadow: 0px 0px 1px $accent;
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+
+  &__list-link--active {
+    text-shadow: 0px 0px 1px $accent;
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link:not(:first-child) {
+    padding-left: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: -9px;
+    right: -13px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+  }
+}
 
 
 
