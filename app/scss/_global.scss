@@ -13,6 +13,13 @@ body {
     @extend %quicksand-500;
 }
 
+a {
+    font-size: 16px;
+    line-height: 26px;
+    color: $default;
+    @extend %quicksand-500;
+}
+
 .main {
     flex-grow: 1;
 }
@@ -23,9 +30,18 @@ body {
     padding: 0 15px;
 }
 
-a {
-    font-size: 16px;
-    line-height: 26px;
-    color: $default;
-    @extend %quicksand-500;
+.title {
+    @extend %roboto-700;
+    font-size: 48px;
+    color: $title;
+    line-height: 65px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text {
+    max-width: 570px;
+    margin: 0 auto 55px;
+    text-align: center;
 }
