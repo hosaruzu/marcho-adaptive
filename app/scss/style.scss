@@ -487,8 +487,148 @@
     @extend %btn;
     padding: 14px 35px;
   }
-
 }
+
+.product {
+  padding: 105px 0 120px;
+  text-align: center;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+  }
+
+  &__link {
+    border: 1px solid $accent;
+    text-transform: uppercase;
+    color: $title;
+    display: inline-block;
+    @extend %roboto-400;
+    padding: 16px 27px;
+    margin-top: 55px;
+  }
+}
+
+.product-item {
+  max-width: 370px;
+  text-align: center;
+
+
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0);
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+
+  &__link-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: #fff;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(300%);
+    transition: .3s all;
+
+  }
+
+  &__link--line::before,
+  &__link--line::after {
+    content: '';
+    position: absolute;
+    background-color: #ececec;
+    width: 1px;
+    height: 30px;
+    top: 10px;
+  }
+
+  &__link--line::before {
+    left: 70px;
+  }
+
+  &__link--line::after {
+    right: 70px;
+  }
+
+  &__link {
+    display: inherit;
+
+    path {
+      transition: .3s all;
+    }
+  }
+
+  &__link:hover {
+    path {
+      fill: $accent;
+    }
+  }
+
+  &__title {
+    color: $title;
+    padding: 15px 0 20px;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    @extend %roboto-500;
+  }
+
+  &__new-price {
+    padding: 0 12px;
+    color: $title;
+  }
+
+  &__old-price {
+    color: #ccccce;
+    text-decoration: line-through;
+    padding: 0 12px;
+  }
+
+  &--sale {
+    .product-item__img-box::before {
+      content: 'SALE';
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      padding: 2px 10px;
+    }
+  }
+}
+
+.star {
+  margin: 0 auto;
+}
+
+
+
+
+
+
 
 
 
