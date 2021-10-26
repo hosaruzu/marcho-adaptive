@@ -35,14 +35,14 @@
     transition: .3s all;
 
     &:hover {
-      @extend %roboto-700;
+      text-shadow: 0 0 1px $accent;
       color: $accent;
       border-bottom: 1px solid $accent;
     }
   }
 
   &__list-link--active {
-    @extend %roboto-700;
+    text-shadow: 0 0 1px $accent;
     color: $accent;
     border-bottom: 1px solid $accent;
   }
