@@ -856,6 +856,14 @@
     margin-bottom: 30px;
   }
 
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__label-checkbox {
+    margin-bottom: 15px;
+  }
+
   &__input {
     display: block;
     width: 100%;
@@ -876,11 +884,12 @@
     text-transform: uppercase;
     color: #fff;
     padding: 15px 0;
-    margin-bottom: 12px;
     cursor: pointer;
   }
 
   &__forgot-pass {
+    margin-top: 12px;
+    display: inline-block;
     color: $accent;
   }
 }
