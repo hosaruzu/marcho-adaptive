@@ -15,6 +15,33 @@ $(function () {
         starSvg: '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>'
     });
 
+    $('.filter-price__input').ionRangeSlider({
+        prefix: '$',
+        onStart: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+        onChange: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        }
+    });
+
+    $('.select-jq-style').styler();
+
+    $('.shop-content__filter-btn').on('click', function () {
+        $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+        $(this).addClass('shop-content__filter-btn--active');
+    });
+
+    $('.js-button-list').on('click', function () {
+        $('.product-item').addClass('product-item--list')
+    });
+
+    $('.js-button-grid').on('click', function () {
+        $('.product-item').removeClass('product-item--list')
+    });
+
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
