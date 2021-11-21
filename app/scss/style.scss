@@ -2209,7 +2209,6 @@
 
 .blog-details {
 
-
   &__left-img {
     float: left;
     margin: 6px 30px 10px 0;
@@ -2355,12 +2354,140 @@
   }
 }
 
+#map {
+  width: 100%;
+  height: 450px;
+}
+
+.map {
+  padding: 120px 0;
+}
+
+.contact {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    max-width: 370px;
+    margin-right: 30px;
+  }
+
+  &__info-title {
+    color: $title;
+    font-size: 48px;
+    line-height: 58px;
+    @extend %roboto-700;
+    margin-bottom: 20px;
+  }
+
+  &__info-text {
+    margin-bottom: 60px;
+  }
+
+  &__info-item {
+    margin-top: 55px;
+    color: $title;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -5px;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/phone-icon.svg');
+      left: 20px;
+      top: 15px;
+    }
+
+    &--location {
+      &::after {
+        width: 14px;
+        left: 23px;
+        background-image: url('../images/icons/location-icon.svg');
+      }
+    }
+
+    &--mail {
+      &::after {
+        width: 18px;
+        left: 21px;
+        background-image: url('../images/icons/mail-icon.svg');
+      }
+    }
+  }
+
+  &__info-tel,
+  &__info-mail {
+    color: inherit;
+    display: block;
+  }
+
+  &__form {
+    padding: 60px 40px;
+    box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+    width: 100%;
+  }
+
+  &__form-title {
+    font-size: 22px;
+    @extend %roboto-700;
+    margin-bottom: 20px;
+    color: $title;
+  }
 
 
+  &__form-input {
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: $bg;
+    border: none;
+    padding: 0 24px;
+    outline-color: $accent;
+    margin-bottom: 30px;
+  }
 
+  &__form-textarea {
+    width: 100%;
+    height: 200px;
+    display: block;
+    resize: none;
+    background-color: $bg;
+    border: none;
+    padding: 20px 24px;
+    outline-color: $accent;
+    margin-bottom: 30px;
+  }
 
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
 
+    input {
+      width: 330px;
+    }
+  }
 
+  &__form-btn {
+    @extend %btn;
+    border: none;
+    padding: 14px 35px;
+  }
+}
 
 
 
