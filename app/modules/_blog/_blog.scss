@@ -1,0 +1,129 @@
+.blog {
+  padding: 50px 0 160px;
+  background-image: url('../images/decor/blog-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      right: -23px;
+      top: -30px;
+      width: 126px;
+      height: 53px;
+      background-image: url('../images/decor/blog-bg-2.svg');
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    border: 1px solid #ececec;
+    transition: .3s all;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+      border: 1px solid transparent;
+
+      .blog__item-link {
+        color: $accent;
+
+        &::after {
+          background-image: url('../images/icons/arrow-accent.svg');
+        }
+      }
+    }
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 288px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 40px;
+    border-top: none;
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item-author,
+  &__item-data {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 3px;
+    }
+  }
+
+  &__item-title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__item-link {
+    position: relative;
+    transition: .3s all;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 8px;
+      position: absolute;
+      top: 7px;
+      right: -14px;
+      background-image: url('../images/icons/arrow.svg');
+    }
+  }
+}
+
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__author,
+  &__data {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 3px;
+    }
+  }
+
+  &__author::before {
+    background-image: url('../images/icons/user-gray.svg');
+  }
+
+  &__data::before {
+    background-image: url('../images/icons/time.svg');
+  }
+}

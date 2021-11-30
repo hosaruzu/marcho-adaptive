@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.min.css">
+    <title>Marcho • Register</title>
+  </head>
+  <body>
+    {% include 'app/modules/_header/_header.html' %}
+    <main class="main">
+      <section class="top">
+        <div class="top__container" style="background-image: url('../images/page-top-bg.jpg')">
+          <div class="container">
+            <h2 class="top__title">
+              Register
+            </h2>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">
+                    Home
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">
+                    Register
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include 'app/modules/_register/_register.html'%}
+    </main>
+    {% include 'app/modules/_footer/_footer.html' %}
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
