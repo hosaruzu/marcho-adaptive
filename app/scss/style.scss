@@ -23,7 +23,7 @@
     color: #28384f;
     @extend %roboto-700;
     font-size: 48px;
-    line-height: 26px;
+    line-height: 52px;
     margin-bottom: 40px;
   }
 
@@ -44,6 +44,10 @@
 
   &__inner {
     display: flex;
+  }
+
+  &__filter-btn {
+    display: none;
   }
 
   &__filters {
@@ -1295,11 +1299,12 @@
 
   .comment-form {
     border-bottom: none;
+
+    &__text-input {
+      max-width: 370px;
+    }
   }
 
-  .comment-form__text-input {
-    max-width: 370px;
-  }
 
   &__box {
     margin: 25px 0 35px;
