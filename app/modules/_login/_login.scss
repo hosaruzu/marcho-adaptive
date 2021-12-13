@@ -1,0 +1,74 @@
+.modal {
+    padding-top: 100px;
+    max-width: 570px;
+    margin: 0 auto 115px;
+
+    &__links {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        @extend %roboto-400;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 0 30px;
+        color: #909090;
+
+        &--active {
+            color: $accent;
+            @extend %roboto-700;
+        }
+
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 25px;
+    }
+
+    &__label-checkbox {
+        margin-bottom: 15px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $bg;
+        height: 60px;
+        margin-top: 4px;
+        padding: 0 15px;
+        outline-color: $accent;
+    }
+
+    &__btn {
+        display: block;
+        background-color: $title;
+        width: 100%;
+        border: none;
+        @extend %roboto-400;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 15px 0;
+        cursor: pointer;
+    }
+
+    &__forgot-pass {
+        margin-top: 12px;
+        display: inline-block;
+        color: $accent;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal {
+        &__link {
+            margin: 0 20px;
+        }
+    }
+}
